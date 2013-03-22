@@ -1,8 +1,10 @@
-# plasm-crumbs-slides
+# PLaSM.js crumbs slides
+
+## for beginners
 
 ### Recipe
 
-- getting started
+1. [introduction](chapters/introduction/Readme.md)
 
 ### Bakers
 
