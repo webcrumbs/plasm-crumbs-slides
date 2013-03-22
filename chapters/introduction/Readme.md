@@ -1,18 +1,20 @@
-# PLaSM.js crumbs
+# PLaSM.js introduction
 
 - - -
 
-## Getting started
+## Introduction
 
 ### Installation
 
 - - -
 
-## Getting started
+## Introduction
 
 ### Web environment
 
 [http://cvdlab.github.com/plasm.js/](http://cvdlab.github.com/plasm.js/)
 
 - - - 
+
+## Introduction
 
