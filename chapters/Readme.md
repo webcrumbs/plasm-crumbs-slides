@@ -1,4 +1,6 @@
-# PLaSM.js crumbs
+# PLaSM.js crumbs slides
+
+## for beginners
 
 ### Recipe
 
