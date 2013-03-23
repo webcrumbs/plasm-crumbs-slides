@@ -31,7 +31,3 @@ Type in the terminal, in your project directory
 
 [http://cvdlab.github.com/plasm.js/](http://cvdlab.github.com/plasm.js/)
 
-- - - 
-
-## Introduction
-
