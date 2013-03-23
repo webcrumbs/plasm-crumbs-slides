@@ -2,10 +2,10 @@
 
 - - -
 
-Hello PLaSM.js
+## Simple shapes
+
+### cube
 
     c = CUBE(3)
     DRAW(c)
-
-- - -
 
