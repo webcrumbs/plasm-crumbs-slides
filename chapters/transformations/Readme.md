@@ -6,29 +6,33 @@
 
 ### Translate
 
-### `TRANSLATE(dims)(values)(object)` / `T(dims)(values)(object)`
+### `T(axis)(values)(model)`
 
-Clone `model` and translate cloned model by `values` on dimensions `dims`.
+Clone `model` and translate the cloned model by `values` along `axis`
 
 #### I/O
 
-> **&rArr;** `Array` `dims`: an array of `Number` specifying which dimensions translate (first dim has index 0).
+> **&rArr;** `Array` `axis`: an array of `Number` specifying which dimensions translate
 >
-> **&lArr;** `Function`: anonymous function.
+> **&lArr;** `Function`: anonymous function
 >
-> > **&rArr;** `Array` `values`: an array of `Number` specifying translation quantity for every dimension in `dims`.
+> > **&rArr;** `Array` `values`: an array of `Number` specifying translation quantity for every dimension in `dims`
 > >
-> > **&lArr;** `Function`: anonymous function.
+> > **&lArr;** `Function`: anonymous function
 > >
-> > > **&rArr;** `plasm.Model` or `plasm.Struct` `object`: the object to translate.
+> > > **&rArr;** `plasm.Model` or `plasm.Struct` `object`: the object to translate
 > > >
-> > > **&lArr;** `plasm.Model` or `plasm.Struct`: the translated object.
+> > > **&lArr;** `plasm.Model` or `plasm.Struct`: the translated object
 
 - - - 
 
-### `TRANSLATE(dims)(values)(object)` / `T(dims)(values)(object)`
+## Transformations
 
-Clone `model` and translate cloned model by `values` on dimensions `dims`.
+### Translate
+
+### `T(axis)(values)(model)`
+
+Clone `model` and translate the cloned model by `values` along `axis`
 
 #### Example
 
@@ -48,6 +52,36 @@ DRAW(c1)
 
 ### Rotate
 
+### `R(axis)(angle)(model)`
+
+Clone `model` and rotate the cloned model by `angle` on the plane described by `axis`
+
+#### I/O
+
+> **&rArr;** `Array` `axis`: rotational plane axis (in 3D `[1,2]`, `[1,3]` or `[2,3]`)
+>
+> **&lArr;** `Funciton`: an anonymous function
+>
+> > **&rArr;** `Number` `angle`: rotational angle (in radiant, from `0` to `2π`)
+> >
+> > **&lArr;** `Function`: an anonymous function
+> >
+> > > **&rArr;** `plasm.Model` or `plasm.Struct` `object`: the object to rotate
+> > >
+> > > **&lArr;** `plasm.Model` or `plasm.Struct`: the rotated object
+
+- - - 
+
+## Transformations
+
+### Rotate
+
+### `R(axis)(angle)(model)`
+
+Clone `model` and rotate the cloned model by `angle` on the plane described by `axis`
+
+#### Example
+
 ```js
 c = CUBE(3)
 DRAW(c)
@@ -60,10 +94,45 @@ DRAW(c1)
 
 - - -
 
+## Transformations
+
+### Scale
+
+### `S(axis)(values)(model)`
+
+Clone `model` and scale the cloned model by `values` along `axis`
+
+#### I/O
+
+> **&rArr;** `Array` `axis`: axis to scale along
+>
+> **&lArr;** `Function`: an anonymous function
+>
+> > **&rArr;** `Array` `values`: scaling factors
+> >
+> > **&lArr;** `Function`: an anonymous function
+> >
+> > > **&rArr;** `plasm.Model` or `plasm.Struct` `object`: the object to scale
+> > >
+> > > **&lArr;** `plasm.Model` or `plasm.Struct`: the scaled object
+
+- - -
 
 ## Transformations
 
 ### Scale
+
+### `S(axis)(values)(model)`
+
+Clone `model` and scale the cloned model by `values` along `axis`
+
+#### Example
+
+> ```js
+> var model = TORUS_SURFACE()();
+> var scaled = SCALE([1,2])([2,0.5])(model);
+> DRAW(scaled);
+> ```
 
 ```js
 c = CUBE(3)
