@@ -12,17 +12,17 @@ Clone `model` and translate cloned model by `values` on dimensions `dims`.
 
 #### I/O
 
-> **in** `Array` `dims`: an array of `Number` specifying which dimensions translate (first dim has index 0).
+> **&rArr;** `Array` `dims`: an array of `Number` specifying which dimensions translate (first dim has index 0).
 >
-> **out** `Function`: anonymous function.
+> **&lArr;** `Function`: anonymous function.
 >
-> > **in** `Array` `values`: an array of `Number` specifying translation quantity for every dimension in `dims`.
+> > **&rArr;** `Array` `values`: an array of `Number` specifying translation quantity for every dimension in `dims`.
 > >
-> > **out** `Function`: anonymous function.
+> > **&lArr;** `Function`: anonymous function.
 > >
-> > > **in** `plasm.Model` or `plasm.Struct` `object`: the object to translate.
+> > > **&rArr;** `plasm.Model` or `plasm.Struct` `object`: the object to translate.
 > > >
-> > > **out** `plasm.Model` or `plasm.Struct`: the translated object.
+> > > **&lArr;** `plasm.Model` or `plasm.Struct`: the translated object.
 
 - - - 
 
