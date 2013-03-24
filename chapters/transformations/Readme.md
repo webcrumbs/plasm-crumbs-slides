@@ -128,12 +128,6 @@ Clone `model` and scale the cloned model by `values` along `axis`
 
 #### Example
 
-> ```js
-> var model = TORUS_SURFACE()();
-> var scaled = SCALE([1,2])([2,0.5])(model);
-> DRAW(scaled);
-> ```
-
 ```js
 c = CUBE(3)
 DRAW(c)
