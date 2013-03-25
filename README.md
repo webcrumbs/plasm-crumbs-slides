@@ -2,9 +2,11 @@
 
 ## for beginners
 
-### Recipe
+### [Recipe](chapters/Readme.md)
 
-1. [introduction](chapters/introduction/Readme.md)
+1. [Introduction](chapters/introduction/Readme.md)
+2. [Basics](chapters/basics/Readme.md)
+3. [Transformations](chapters/transformations/Readme.md)
 
 ### Bakers
 
