@@ -2,7 +2,7 @@
 
 ## for beginners
 
-### Recipe
+### [Recipe](Readme.md)
 
 1. [Introduction](introduction/Readme.md)
 2. [Basics](basics/Readme.md)
