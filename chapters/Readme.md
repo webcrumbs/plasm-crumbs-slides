@@ -4,5 +4,7 @@
 
 ### Recipe
 
-1. [introduction](introduction/Readme.md)
+1. [Introduction](introduction/Readme.md)
+2. [Basics](basics/Readme.md)
+3. [Trasnformations](transformations/Readme.md)
 
