@@ -48,7 +48,13 @@ Install [component module](https://npmjs.org/package/component)
 
     $ npm install component -g
 
-#### Installation
+- - - 
+
+## Introduction
+
+### Installation
+
+#### Install and build
 
 Create your project folder
 
@@ -78,4 +84,26 @@ Create a `index.html`
 </html>
 ```
 
+Open PLaSM.js
+
+    $ open index.html
+
 - - -
+
+## Introduction
+
+### Installation
+
+#### PLaSM.js boilerplate
+
+Clone PLaSM.js boilerplate (a PLaSM.js project scaffold)
+
+    $ git clone git@github.com:cvdlab/plasm-boilerplate.git
+    $ cd plasm-boilerplate
+    $ component install
+    $ component build
+
+Open PLaSM.js
+
+    $ open index.html
+    
