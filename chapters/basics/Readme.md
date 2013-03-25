@@ -97,17 +97,17 @@ Create a cylindrical surface.
 
 #### I/O
 
-> **&rArr;** `Array` `dims`: dimensions `[r, h]`.
-> > `Number` `r`: the radius (`1` by default)
+> **&rArr;** `Array` `dims`: dimensions `[r, h]`
+> > `Number` `r`: the radius (`1` by default)  
 > > `Number` `h`: the height (`1` by default)
 >
-> **&lArr;** `Function`: an anonymous function.
+> **&lArr;** `Function`: an anonymous function
 >
-> > **&rArr;** `Array` `divs`: divisions `[slices, stacks]`.
-> > > `Number` `slices`: slices (`16` by default).
-> > > `Number` `stacks`: stacks (`2` by default).
+> > **&rArr;** `Array` `divs`: divisions `[slices, stacks]`
+> > > `Number` `slices`: slices (`16` by default)  
+> > > `Number` `stacks`: stacks (`2` by default)
 > >
-> > **&lArr;** `plasm.Model`: a cylindrical surface with radius `r` and height `h`, divided in `slices` and `stacks`.
+> > **&lArr;** `plasm.Model`: a cylindrical surface with radius `r` and height `h`, divided in `slices` and `stacks`
 
 - - - 
 
