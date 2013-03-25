@@ -20,6 +20,23 @@ Create a `dim`-dimensional cube.
 
 ## Simple shapes
 
+### cube
+
+#### `CUBE(dim)`
+
+Create a `dim`-dimensional cube.
+
+#### Example
+
+```js
+var c = CUBE(3)
+DRAW(c)
+```
+
+- - -
+
+## Simple shapes
+
 ### cuboid
 
 ### `CUBOID(dims)`
