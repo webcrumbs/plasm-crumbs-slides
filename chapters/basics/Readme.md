@@ -10,7 +10,11 @@
 
 Add `model` to the scene.
 
+#### I/O
 
+> **&rArr;** `Model` `model`: the model to draw
+>
+> **&lArr;** `Model` the model
 
 - - -
 
