@@ -2,7 +2,7 @@
 
 - - -
 
-## Getting started
+## Simple shapes
 
 ### draw
 
@@ -15,6 +15,26 @@ Add `model` to the scene.
 > **&rArr;** `Model` `model`: the model to draw
 >
 > **&lArr;** `Model` the model
+
+- - -
+
+## Simple shapes
+
+### show
+
+#### `SHOW(model)`
+
+Show an hidden model of the scene
+
+- - - 
+
+## Simple shapes
+
+### hide
+
+#### `HIDE(model)`
+
+Hide a model of the scene.
 
 - - -
 
