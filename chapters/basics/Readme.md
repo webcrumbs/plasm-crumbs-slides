@@ -2,6 +2,18 @@
 
 - - -
 
+## Getting started
+
+### draw
+
+#### `DRAW(model)`
+
+Add `model` to the scene.
+
+
+
+- - -
+
 ## Simple shapes
 
 ### cube
