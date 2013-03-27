@@ -213,11 +213,11 @@ DRAW(grid1)
 ```
 
 ```js
-var grid2 = SIMPLEX_GRID([[1,-1,2],[2,2]])
+var grid2 = SIMPLEX_GRID([[1,-1,2],[2,-1,2]])
 DRAW(grid2)
 ```
 
 ```js
-var grid3 = SIMPLEX_GRID([[1,-1,2],[2,2],[1]])
+var grid3 = SIMPLEX_GRID([[1,-1,2],[2,-1,2],[1,-1,0.5]])
 DRAW(grid3)
 ```
