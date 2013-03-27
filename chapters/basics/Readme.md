@@ -185,3 +185,38 @@ DRAW(cylinder);
 var cylinder = CYLSURFACE()();
 DRAW(cylinder);
 ```
+- - -
+
+## simple shape
+
+### symplex grid
+
+#### SIMPLEX_GRID
+
+Create a grid of simplexes
+
+#### I/O
+
+> **&rArr;** `Array` `quotes`: an array of array of quotes for each dimension of the grid  
+> >  quotes start from from dimension `0`  
+> >  quotes may be both positive and negative  
+> >  - positive quotes are filled
+> >  - negative quotes aren't filled
+> **&lArr;** `Model` the simplex grid
+
+#### Example
+
+```js
+var grid1 = SIMPLEX_GRID([[1,-1,2]])
+DRAW(grid1)
+```
+
+```js
+var grid2 = SIMPLEX_GRID([[1,-1,2],[2,2]])
+DRAW(grid2)
+```
+
+```js
+var grid3 = SIMPLEX_GRID([[1,-1,2],[2,2],[1]])
+DRAW(grid3)
+```
