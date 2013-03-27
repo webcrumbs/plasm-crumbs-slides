@@ -201,7 +201,8 @@ Create a grid of simplexes
 > >  quotes start from from dimension `0`  
 > >  quotes may be both positive and negative  
 > >  - positive quotes are filled
-> >  - negative quotes aren't filled
+> >  - negative quotes aren't filled  
+> 
 > **&lArr;** `Model` the simplex grid
 
 #### Example
