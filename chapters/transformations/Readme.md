@@ -130,8 +130,43 @@ it is applied to all of the following items.
 
 ```js
 var cube1 = CUBE(3);
-var cube2 = T([0])([1.3])(cube1);
+var t = T([0])([1.5]);
+var cube2 = t(cube1);
 var struct1 = STRUCT([cube1, cube2]);
-var t = T([1])([1.3]);
-var struct = STRUCT([struct1, t, struct1, t, cube1]);
+DRAW(struct1);
+```
+
+```js
+var cube1 = CUBE(3);
+var t = T([0])([1.5]);
+var struct1 = STRUCT([cube1, t, cube1]);
+DRAW(struct1);
+```
+
+- - -
+
+## Transformation
+
+### Extrude
+
+#### `EXTRUDE(quotes)(object)`
+
+Extrude an object
+
+#### I/O
+
+> **&rArr;** `Array` `quotes`: a list of quotes of extrusion
+> 
+> **&lArr;** `Function`: an anonimous function
+> 
+> > **&rArr;** `Model` or `Struct` `object`: the object to extrude
+> > 
+> > **&lArr;** `Model` or `Struct` the object extruded 
+
+#### Example
+
+```js
+var model = SIMPLEX(1);
+var extruded = EXTRUDE([1])(model);
+DRAW(extruded);
 ```
