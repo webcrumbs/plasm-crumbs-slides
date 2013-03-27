@@ -24,16 +24,6 @@ Clone `model` and translate the cloned model by `values` along `axis`
 > > >
 > > > **&lArr;** `plasm.Model` or `plasm.Struct`: the translated object
 
-- - - 
-
-## Transformations
-
-### Translate
-
-### `T(axis)(values)(model)`
-
-Clone `model` and translate the cloned model by `values` along `axis`
-
 #### Example
 
 ```js
@@ -69,16 +59,6 @@ Clone `model` and rotate the cloned model by `angle` on the plane described by `
 > > > **&rArr;** `plasm.Model` or `plasm.Struct` `object`: the object to rotate
 > > >
 > > > **&lArr;** `plasm.Model` or `plasm.Struct`: the rotated object
-
-- - - 
-
-## Transformations
-
-### Rotate
-
-### `R(axis)(angle)(model)`
-
-Clone `model` and rotate the cloned model by `angle` on the plane described by `axis`
 
 #### Example
 
@@ -116,16 +96,6 @@ Clone `model` and scale the cloned model by `values` along `axis`
 > > >
 > > > **&lArr;** `plasm.Model` or `plasm.Struct`: the scaled object
 
-- - -
-
-## Transformations
-
-### Scale
-
-### `S(axis)(values)(model)`
-
-Clone `model` and scale the cloned model by `values` along `axis`
-
 #### Example
 
 ```js
@@ -138,3 +108,30 @@ c1 = S([1,2])([10,15])(c)
 DRAW(c1)
 ```
 
+- - -
+
+## Transformations
+
+### Struct
+
+#### `STRUCT(items)`
+
+Create a struct of items.  
+If a transformation is encountered in items,  
+it is applied to all of the following items.
+
+#### I/O
+
+> **&rArr;** `Array` `items`: an array of plasm.Model or plasm.Struct or Function
+> 
+> **&lArr;** `Struct`: the struct.
+
+#### Example
+
+```js
+var cube1 = CUBE(3);
+var cube2 = T([0])([1.3])(cube1);
+var struct1 = STRUCT([cube1, cube2]);
+var t = T([1])([1.3]);
+var struct = STRUCT([struct1, t, struct1, t, cube1]);
+```
