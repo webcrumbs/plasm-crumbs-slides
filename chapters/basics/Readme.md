@@ -4,7 +4,7 @@
 
 ## Simple shapes
 
-### cube
+### Cube
 
 #### `CUBE(dim)`
 
@@ -26,7 +26,7 @@ var c = CUBE(3)
 
 ## Simple shapes
 
-### draw
+### Draw
 
 #### `DRAW(model)`
 
@@ -49,7 +49,7 @@ DRAW(model)
 
 ## Simple shapes
 
-### hide
+### Hide
 
 #### `HIDE(model)`
 
@@ -73,7 +73,7 @@ HIDE(model)
 
 ## Simple shapes
 
-### show
+### Show
 
 #### `SHOW(model)`
 
@@ -111,9 +111,9 @@ window.setInterval(function () {
 
 ## Simple shapes
 
-### cuboid
+### Cuboid
 
-### `CUBOID(dims)`
+#### `CUBOID(dims)`
 
 Create a cuboidal simplicial complex with dimensions `dims`
 
@@ -161,24 +161,29 @@ Create a `dim`-dimensional simplex with sides length equal to `1`
 
 #### I/O
 
-> **&rArr;** `Number` `dim` simplex dimension
+> **&rArr;** `Number` `dim`: simplex dimension
 > 
-> **&lArr;** `Model` a simplex of dim dim
+> **&lArr;** `Model` a simplex of dim `dim`
 
 #### Example
 
 ```js
-var simplex = SIMPLEX(3);
-DRAW(simplex);
+var simplex2 = SIMPLEX(2);
+DRAW(simplex2);
+```
+
+```js
+var simplex3 = SIMPLEX(3);
+DRAW(simplex3);
 ```
 
 - - - 
 
 ## Simple shapes
 
-### cylinder surface
+### Cylinder surface
 
-### `CYL_SURFACE(dims)(divs)`
+#### `CYL_SURFACE(dims)(divs)`
 
 Create a cylindrical surface.
 
@@ -212,7 +217,7 @@ DRAW(cylinder);
 
 ## simple shape
 
-### symplex grid
+### Symplex grid
 
 #### `SIMPLEX_GRID`
 
@@ -249,7 +254,7 @@ DRAW(grid3)
 
 ## simple shape
 
-### polyline
+### Polyline
 
 #### `POLYLINE(points)`
 
@@ -257,16 +262,47 @@ Create a polyline made by `points`
 
 #### I/O
 
-> **&rArr;** `Array` `points`: an array of points ([p0, p1, ...])
+> **&rArr;** `Array` `points`: an array of points
 > > `Array` `points[i]` `i`-th point: an array of coordinates
-> > > `Number` `point[k]` `k`-th coord
+> > > `Number` `point[k]` `k`-th coordinate
 > 
 > **&lArr;** `Model` a polyline made by `points`
 
 #### Example
 
 ```js
-var points = [[0,0], [1,1], [2,0]];
-var polyline = POLYLINE(points);
-DRAW(polyline);
+var points = [[0,0], [1,1], [2,0]]
+var polyline = POLYLINE(points)
+DRAW(polyline)
+```
+
+- - -
+
+## simple shape
+
+### Simplicial complex
+
+#### `SIMPLICIAL_COMPLEX(points)(cells)`
+
+Create a simplicial complex composed by cells `cells` of points `points`
+
+#### I/O
+
+> **&rArr;** `Array` `points`: an array of points
+> > `Array` `points[i]` `i`-th point: an array of coordinates
+> > > `Number` `point[k]` `k`-th coordinate
+> 
+> **&lArr;** `Function`: anonymous function
+> > 
+> > **&rArr;** `Array` `cells`: complex's highest order cells represented as arrays of indices of points
+> > 
+> > **&lArr;** `Model` the simplicila complex
+
+#### Example
+
+```js
+var points = [[0,0],[1,0],[0,1],[1,1],[0.5,1.5]];
+var cells = [[0,1,2],[1,3,2],[2,3,4]];
+var complex = SIMPLICIAL_COMPLEX(points)(cells);
+DRAW(complex);
 ```
