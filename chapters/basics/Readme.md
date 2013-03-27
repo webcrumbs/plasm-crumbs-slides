@@ -191,7 +191,7 @@ DRAW(cylinder);
 
 ### symplex grid
 
-#### SIMPLEX_GRID
+#### `SIMPLEX_GRID`
 
 Create a grid of simplexes
 
