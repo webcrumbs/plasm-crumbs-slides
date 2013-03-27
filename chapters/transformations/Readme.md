@@ -122,7 +122,7 @@ it is applied to all of the following items.
 
 #### I/O
 
-> **&rArr;** `Array` `items`: an array of plasm.Model or plasm.Struct or Function
+> **&rArr;** `Array` `items`: an array of `Model` or `Struct` or `Function`
 > 
 > **&lArr;** `Struct`: the struct.
 
