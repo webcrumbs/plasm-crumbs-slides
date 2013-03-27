@@ -153,6 +153,29 @@ DRAW(cuboid3);
 
 ## Simple shapes
 
+### Symplex
+
+#### `SIMPLEX(dim)`
+
+Create a `dim`-dimensional simplex with sides length equal to `1`
+
+#### I/O
+
+> **&rArr;** `Number` `dim` simplex dimension
+> 
+> **&lArr;** `Model` a simplex of dim dim
+
+#### Example
+
+```js
+var simplex = SIMPLEX(3);
+DRAW(simplex);
+```
+
+- - - 
+
+## Simple shapes
+
 ### cylinder surface
 
 ### `CYL_SURFACE(dims)(divs)`
