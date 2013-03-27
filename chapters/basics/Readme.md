@@ -221,3 +221,29 @@ DRAW(grid2)
 var grid3 = SIMPLEX_GRID([[1,-1,2],[2,-1,2],[1,-1,0.5]])
 DRAW(grid3)
 ```
+
+- - -
+
+## simple shape
+
+### polyline
+
+#### `POLYLINE(points)`
+
+Create a polyline made by `points`
+
+#### I/O
+
+> **&rArr;** `Array` `points`: an array of points ([p0, p1, ...])
+> > `Array` `points[i]` `i`-th point: an array of coordinates
+> > > `Number` `point[k]` `k`-th coord
+> 
+> **&lArra;** `Model` a polyline made by `points`
+
+#### Example
+
+```js
+var points = [[0,0], [1,1], [2,0]];
+var polyline = POLYLINE(points);
+DRAW(polyline);
+```
