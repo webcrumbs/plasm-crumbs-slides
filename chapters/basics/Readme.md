@@ -1,5 +1,27 @@
 # PLaSM.js basics
 
+- - - 
+
+## Simple shapes
+
+### cube
+
+#### `CUBE(dim)`
+
+Create a `dim`-dimensional cube.
+
+#### I/O
+
+> **&rArr;** `Number` `dim`: dimension of the cube.
+>
+> **&lArr;** `plasm.Model`: a cube with `dim` dimension.
+
+#### Example
+
+```js
+var c = CUBE(3)
+```
+
 - - -
 
 ## Simple shapes
@@ -16,6 +38,37 @@ Add `model` to the scene.
 >
 > **&lArr;** `Model` the model
 
+#### Example
+
+```js
+var model = CUBE(3)
+DRAW(model)
+```
+
+- - -
+
+## Simple shapes
+
+### hide
+
+#### `HIDE(model)`
+
+Hide a model of the scene.
+
+#### I/O
+
+> **&rArr;** `Model` `model`: the model to hide
+>
+> **&lArr;** `Model` the model
+
+#### Example
+
+```js
+var model = CUBE(3)
+DRAW(model)
+HIDE(model)
+```
+
 - - -
 
 ## Simple shapes
@@ -26,47 +79,32 @@ Add `model` to the scene.
 
 Show an hidden model of the scene
 
-- - - 
-
-## Simple shapes
-
-### hide
-
-#### `HIDE(model)`
-
-Hide a model of the scene.
-
-- - -
-
-## Simple shapes
-
-### cube
-
-#### `CUBE(dim)`
-
-Create a `dim`-dimensional cube.
-
 #### I/O
 
-> **&rArr;** `Number` `dim`: dimension of the cube.
+> **&rArr;** `Model` `model`: the model to show
 >
-> **&lArr;** `plasm.Model`: a cube with `dim` dimension.
-
-- - -
-
-## Simple shapes
-
-### cube
-
-#### `CUBE(dim)`
-
-Create a `dim`-dimensional cube.
+> **&lArr;** `Model` the model
 
 #### Example
 
 ```js
-var c = CUBE(3)
-DRAW(c)
+var model = CUBE(3)
+DRAW(model)
+HIDE(model)
+SHOW(model)
+```
+
+```js
+var visible = true
+window.setInterval(function () {
+  if (visible) {
+    HIDE(model)
+    visible = false
+  } else {
+    SHOW(model)
+    visible = true
+  }
+}, 1000);
 ```
 
 - - -
@@ -77,28 +115,18 @@ DRAW(c)
 
 ### `CUBOID(dims)`
 
-Create a cuboidal simplicial complex with dimensions `[dx, dy, dz, ...]`
+Create a cuboidal simplicial complex with dimensions `dims`
 
 #### I/O
 
 > **&rArr;** `Array` `dims`: sides length for each dimension of the simplicial complex
 >
-> - `Number` `dx`: dimension along x axe
-> - `Number` `dy`: dimension along y axe
-> - `Number` `dz`: dimension along z axe
+> - `Number` `dx`: dimension along *x* axis
+> - `Number` `dy`: dimension along *y* axis
+> - `Number` `dz`: dimension along *z* axis
 > - ...
 >
 > **&lArr;** `plasm.Model`: a cuboidal simplicial complex with dimensions `dims`
-
-- - -
-
-## Simple shapes
-
-### cuboid
-
-### `CUBOID(dims)`
-
-Create a cuboidal simplicial complex with dimensions `[dx, dy, dz, ...]`
 
 #### Example
 
@@ -145,19 +173,15 @@ Create a cylindrical surface.
 > >
 > > **&lArr;** `plasm.Model`: a cylindrical surface with radius `r` and height `h`, divided in `slices` and `stacks`
 
-- - - 
-
-## Simple shapes
-
-### cylinder surface
-
-### `CYL_SURFACE(dims)(divs)`
-
-Create a cylindrical surface.
-
 #### Example
 
 ```js
-var model = CYLSURFACE()();
-DRAW(model);
+var cylinder = CYLSURFACE([1,3])([32,3]);
+DRAW(cylinder);
+```
+
+```js
+//use default values r=1, h=1, slices=16, stacks=2
+var cylinder = CYLSURFACE()();
+DRAW(cylinder);
 ```
