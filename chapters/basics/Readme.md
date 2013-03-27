@@ -238,7 +238,7 @@ Create a polyline made by `points`
 > > `Array` `points[i]` `i`-th point: an array of coordinates
 > > > `Number` `point[k]` `k`-th coord
 > 
-> **&lArra;** `Model` a polyline made by `points`
+> **&lArr;** `Model` a polyline made by `points`
 
 #### Example
 
