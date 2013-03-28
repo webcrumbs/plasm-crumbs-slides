@@ -111,6 +111,15 @@ var model = MAP(mapping)(domain);
 DRAW(model);
 ```
 
+```js
+var domain = DOMAIN([[0, 5]])([10]);
+var fx = function (v) { return [v[0]]; };
+var fy = function (v) { return [v[0]]; };
+mappings = [fx, fy];
+var model = MAP(mappings)(domain);
+DRAW(model);
+```
+
 - - -
 
 ## Domain mapping
@@ -120,13 +129,35 @@ DRAW(model);
 #### sin
 
 ```js
+var domain = DOMAIN([[0, 2*PI]])([36]);
+var mapping = function (v) { return [v[0], SIN(V[0])]; };
+var model = MAP(mapping)(domain);
+DRAW(model1);
+```
 
+```js
+var fx = function (v) { return [v[0]]; };
+var fy = function (v) { return [SIN(V[0])]; };
+var mappings = [fx, fy];
+var model = MAP(mappings)(domain);
+DRAW(model);
 ```
 
 #### cos
 
 ```js
+var domain = DOMAIN([[0, 2*PI]])([36]);
+var mapping = function (v) { return [v[0], COS(V[0])]; };
+var model = MAP(mapping)(domain);
+DRAW(model1);
+```
 
+```js
+var fx = function (v) { return [v[0]]; };
+var fy = function (v) { return [COS(V[0])]; };
+var mappings = [fx, fy];
+var model = MAP(mappings)(domain);
+DRAW(model);
 ```
 
 - - -
@@ -138,7 +169,22 @@ DRAW(model);
 #### Circle
 
 ```js
+var domain = DOMAIN([[0, 2*PI]])([36]);
+var mapping = function (v) { return [COS(V[0]), SIN(V[0])]; };
+var model = MAP(mapping)(domain);
+DRAW(model);
+```
 
+```js
+var domain = DOMAIN([[0, 2*PI]])([36]);
+var circle = function (r) {
+  return  function (v) {
+    return [r * COS(V[0]), r * SIN(V[0])];
+  };
+};
+var mapping = circle(3);
+var model = MAP(mapping)(domain);
+DRAW(model);
 ```
 
 - - -
@@ -156,6 +202,20 @@ var mapping = function (v) {
   var b = v[1];
   return [SIN(a)*COS(b), SIN(a)*SIN(b), COS(a)];
 };
+var model = MAP(mapping)(domain);
+DRAW(model);
+```
+
+```js
+var domain = DOMAIN([[0, PI], [0, 2*PI]])([24,36]);
+var sphere = function (r) {
+  return function (v) {
+    var a = v[0];
+    var b = v[1];
+    return [r*SIN(a)*COS(b), r*SIN(a)*SIN(b), r*COS(a)];
+  };
+};
+var mapping = sphere(2);
 var model = MAP(mapping)(domain);
 DRAW(model);
 ```
