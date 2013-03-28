@@ -219,3 +219,30 @@ var mapping = sphere(2);
 var model = MAP(mapping)(domain);
 DRAW(model);
 ```
+
+- - -
+
+## Domain mapping
+
+### Mappings
+
+#### Torus
+
+```js
+var domain = DOMAIN([[0, 2*PI],[0, 2*PI]])([36,72]);
+var torus = function (R, r) {
+  return function (v) {
+    var a = v[0];
+    var b = v[1];
+
+    var u = (r * COS(a) + R) * COS(b);
+    var v = (r * COS(a) + R) * SIN(b);
+    var w = (r * SIN(a));
+
+    return [u,v,w];
+  }
+}
+var mapping = torus(3,1);
+var model = MAP(mapping)(domain);
+DRAW(model);
+```
