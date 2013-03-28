@@ -150,7 +150,7 @@ DRAW(model);
 #### Sphere
 
 ```js
-var domain = DOMAIN([[-PI/2, PI/2], [-PI, PI]])([24,36]);
+var domain = DOMAIN([[0, PI], [0, 2*PI]])([24,36]);
 var mapping = function (v) {
   var a = v[0];
   var b = v[1];
