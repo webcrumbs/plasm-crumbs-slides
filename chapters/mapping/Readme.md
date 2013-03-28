@@ -39,17 +39,17 @@ Create a domain.
 #### Example
 
 ```js
-var domain1 = DOMAIN([[0,PI])([32]);
+var domain1 = DOMAIN([[0, PI])([32]);
 DRAW(domain1);
 ```
 
 ```js
-var domain2 = DOMAIN([[0,PI], [0,1]])([32, 2]);
+var domain2 = DOMAIN([[0, PI], [0,1]])([32, 2]);
 DRAW(domain2);
 ```
 
 ```js
-var domain3 = DOMAIN([[0,PI], [0,1], [0,0.5]])([32, 2, 5]);
+var domain3 = DOMAIN([[0, PI], [0,1], [0, 0.5]])([32, 2, 5]);
 DRAW(domain3);
 ```
 
@@ -80,25 +80,18 @@ Map a domain by a mapping function.
 #### Example
 
 ```js
-var mapping = function (v) { return [v[0] + 1, v[1], v[2]]; }
-var model = TORUS_SURFACE()()
-var mapped = MAP(mapping)(model)
-DRAW(mapped)
-````
-
-```js
-var domain = DOMAIN([[0,1]],[0,2*PI])
-var mapping = function (v) { return [SIN(v[0]), COS(v[1])]; })
-var model = MAP(mapping)(domain)
-DRAW(model)
+var domain = DOMAIN([[0, 2*PI]]),[32]);
+var mapping = function (v) { return [SIN(v[0]), COS(v[1])]; });
+var model = MAP(mapping)(domain);
+DRAW(model);
 ```
 
 ```js
-var domain = DOMAIN([[0,1]],[0,2*PI])
+var domain = DOMAIN([[0, 2*PI]]),[32]);
 var mapping = [
-  function (v) { return SIN(v[0]); },
-  function (v) { return COS(v[1]); }
-]
-var model = MAP(mapping)(domain)
-DRAW(model)
+  function (v) { return [SIN(v[0])]; },
+  function (v) { return [COS(v[1])]; }
+];
+var model = MAP(mapping)(domain);
+DRAW(model);
 ```
