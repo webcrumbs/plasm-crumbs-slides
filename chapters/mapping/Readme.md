@@ -95,3 +95,18 @@ var mapping = [
 var model = MAP(mapping)(domain);
 DRAW(model);
 ```
+
+- - - 
+
+## Domain mapping
+
+### Mappings
+
+#### Bisector
+
+```js
+var domain = DOMAIN([[0, 5]])([10]);
+var mapping = function (v) { return [v[0], v[0]] };
+var model = MAP(mapping)(domain);
+DRAW(model);
+```
