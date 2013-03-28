@@ -150,11 +150,12 @@ DRAW(model);
 #### Sphere
 
 ```js
-var domain = DOMAIN([[0, 5]])([10]);
+var domain = DOMAIN([[0, PI], [0, 2*PI]])([12,32])
 var mapping = function (v) {
   var a = v[0];
   var b = v[1];
   return [SIN(a)*COS(b), SIN(a)*SIN(b), COS(a)];
 };
 var model = MAP(mapping)(domain);
+DRAW(model);
 ```
