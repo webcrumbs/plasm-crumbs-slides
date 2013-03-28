@@ -110,3 +110,51 @@ var mapping = function (v) { return [v[0], v[0]] };
 var model = MAP(mapping)(domain);
 DRAW(model);
 ```
+
+- - -
+
+## Domain mapping
+
+### Mappings
+
+#### sin
+
+```js
+
+```
+
+#### cos
+
+```js
+
+```
+
+- - -
+
+## Domain mapping
+
+### Mappings
+
+#### Circle
+
+```js
+
+```
+
+- - -
+
+## Domain mapping
+
+### Mappings
+
+#### Sphere
+
+```js
+var domain = DOMAIN([[0, 5]])([10]);
+var mapping = function (v) {
+  var a = v[0];
+  var b = v[1];
+  return [SIN(a)*COS(b), SIN(a)*SIN(b), COS(a)];
+};
+var model = MAP(mapping)(domain);
+```
