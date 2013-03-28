@@ -80,14 +80,14 @@ Map a domain by a mapping function.
 #### Example
 
 ```js
-var domain = DOMAIN([[0, 2*PI]]),[32]);
+var domain = DOMAIN([[0, 2*PI]])([32]);
 var mapping = function (v) { return [SIN(v[0]), COS(v[1])]; });
 var model = MAP(mapping)(domain);
 DRAW(model);
 ```
 
 ```js
-var domain = DOMAIN([[0, 2*PI]]),[32]);
+var domain = DOMAIN([[0, 2*PI]])([32]);
 var mapping = [
   function (v) { return [SIN(v[0])]; },
   function (v) { return [COS(v[1])]; }
