@@ -240,8 +240,8 @@ var torus = function (R, r) {
     var w = (r * SIN(a));
 
     return [u,v,w];
-  }
-}
+  };
+};
 var mapping = torus(3,1);
 var model = MAP(mapping)(domain);
 DRAW(model);
