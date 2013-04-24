@@ -65,42 +65,51 @@ in console
     mkdir project
     cd project
 
-Install plasm component
+Install and build PLaSM component
 
-in console
+in a file `component.js`
 
-    component install cvdlab/plasm
-    component build
+```json
+{
+  "dependencies": {
+    "cvdlab/plasm-fun": "*"
+  }
+}
+```
 
 in a file `index.html`
 
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>plasm.js</title>
-    <link href="build/build.js">
-  </head>
-  <div id="plasm"></div>    
+<head>
+  <meta charset="utf-8">
+  <title>PLaSM</title>
+  <link rel="stylesheet" href="build/build.css">
+</head>
+<body>
+  <section>
+    <div id="plasm"></div>
+  </section>
   <script src="build/build.js"></script>
   <script>
-    var plasm = require('cvdlab-plasm');
-    var app = plasm.Viewer('plasm');
+    var PLASM = require('cvdlab-plasm-fun');
+    PLASM('plasm').globalize();
   </script>
+</body>
 </html>
 ```
 
-Open PLaSM.js
-
 in console
 
-    open index.html
+    component install -d
+    component build -d
 
 - - -
 
 ## Introduction
 
-### Installation alternative
+### Installation (quick) alternative
 
 #### PLaSM.js boilerplate
 
@@ -110,8 +119,16 @@ in console
 
     git clone git@github.com:cvdlab/plasm-boilerplate.git
     cd plasm-boilerplate
-    component install
-    component build
+    component install -d
+    component build -d
+
+- - - 
+
+## Introduction
+
+### Test
+
+#### Hello Cube
 
 Open PLaSM.js
 
