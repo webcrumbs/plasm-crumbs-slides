@@ -46,7 +46,9 @@ Install [NodeJS](http://nodejs.org/)
 
 Install [component module](https://npmjs.org/package/component)
 
-    $ npm install component -g
+in console
+
+    npm install component -g
 
 - - - 
 
@@ -58,15 +60,19 @@ Install [component module](https://npmjs.org/package/component)
 
 Create your project folder
 
-    $ mkdir project
-    $ cd project
+in console
+
+    mkdir project
+    cd project
 
 Install plasm component
 
-    $ component install cvdlab/plasm
-    $ component build
+in console
 
-Create a `index.html`
+    component install cvdlab/plasm
+    component build
+
+in a file `index.html`
 
 ```html
 <!DOCTYPE html>
@@ -86,7 +92,9 @@ Create a `index.html`
 
 Open PLaSM.js
 
-    $ open index.html
+in console
+
+    open index.html
 
 - - -
 
@@ -98,17 +106,21 @@ Open PLaSM.js
 
 Clone PLaSM.js boilerplate (a PLaSM.js project scaffold)
 
-    $ git clone git@github.com:cvdlab/plasm-boilerplate.git
-    $ cd plasm-boilerplate
-    $ component install
-    $ component build
+in console
+
+    git clone git@github.com:cvdlab/plasm-boilerplate.git
+    cd plasm-boilerplate
+    component install
+    component build
 
 Open PLaSM.js
 
-    $ open index.html
-    
-Open Tools > JavaScript Console
+in console
 
-    > DRAW(COLOR([1,0,0])(CUBE(3))
+    open index.html
     
-If PLaSM works, you should see a red cube
+in JavaScript Console
+
+    DRAW(COLOR([1,0,0])(CUBE(3))
+    
+if PLaSM works, you should see a red cube
