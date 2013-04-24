@@ -100,11 +100,11 @@ in console
 
 ## Introduction
 
-### Installation
+### Installation alternative
 
 #### PLaSM.js boilerplate
 
-Clone PLaSM.js boilerplate (a PLaSM.js project scaffold)
+Clone [PLaSM.js boilerplate](https://github.com/cvdlab/plasm-boilerplate) (a PLaSM.js project scaffold)
 
 in console
 
