@@ -107,3 +107,8 @@ Open PLaSM.js
 
     $ open index.html
     
+Open Tools > JavaScript Console
+
+    > DRAW(COLOR([1,0,0])(CUBE(3))
+    
+If PLaSM works, you should see a red cube
