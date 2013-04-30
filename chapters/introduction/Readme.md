@@ -138,6 +138,6 @@ in console
 
 in JavaScript Console
 
-    DRAW(COLOR([1,0,0])(CUBE(3))
+    DRAW(COLOR([1,0,0])(CUBE(3)))
 
 if PLaSM works, you should see a red cube
