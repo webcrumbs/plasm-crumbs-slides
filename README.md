@@ -8,6 +8,7 @@
 2. [Basics](chapters/basics/Readme.md)
 3. [Transformations](chapters/transformations/Readme.md)
 4. [Mapping](chapters/mapping/Readme.md)
+5. [Curves](chapters/curves/Readme.md)
 
 ### Bakers
 
