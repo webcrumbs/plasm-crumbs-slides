@@ -9,6 +9,7 @@
 3. [Transformations](chapters/transformations/Readme.md)
 4. [Mapping](chapters/mapping/Readme.md)
 5. [Curves](chapters/curves/Readme.md)
+6. [Surfaces](chapters/surfaces/Readme.md)
 
 ### Bakers
 
