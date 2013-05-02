@@ -8,3 +8,5 @@
 2. [Basics](basics/Readme.md)
 3. [Trasnformations](transformations/Readme.md)
 4. [Mapping](mapping/Readme.md)
+5. [Curves](curves/Readme.md)
+6. [Surfaces](surfaces/Readme.md)
