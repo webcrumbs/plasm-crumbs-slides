@@ -278,3 +278,33 @@ Non-uniform Rational B-Spline.
 > ```
 
 - - - 
+
+
+### `SPLINE(curve)(controlpoints)`
+Create spline curve.
+
+#### I/O
+
+> #### in
+> `Function` `curve`: spline curve generator function, such as the result of application of `CUBIC_UBSPLINE` or `CUBIC_CARDINAL` to a domain.
+>
+> #### out
+> `Function`: an anonymous function.
+>
+> > #### in
+> > `Array` `controlpoints`: an array of points and curve mapping functions describing curve control points.
+> >
+> > #### out
+> > `plasm.Struct`: the spline.
+
+#### Example
+
+>```js
+> var domain = INTERVALS(1)(20);
+> var controlpoints = [[-3,6],[-4,2],[-3,-1],[-1,1],[1.5,1.5],[3,4],[5,5],[7,2],[6,-2],[2,-3]];
+> var splineCardinal = COLOR([1,0,0])(SPLINE(CUBIC_CARDINAL(domain))(controlpoints));
+> var splineCubic = COLOR([0,1,0])(SPLINE(CUBIC_UBSPLINE(domain))(controlpoints));
+> var points = SIMPLICIAL_COMPLEX(controlpoints)([[0],[1],[2],[3],[4],[5],[6],[7],[8],[9]]);
+> var out = STRUCT([splineCardinal,splineCubic,points]);
+> DRAW(out);
+>```
