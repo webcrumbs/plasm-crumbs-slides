@@ -79,3 +79,46 @@ Tranfinite Cubic cardinal splines curve generator function on `domain`.
 
 - - - 
 
+### `CUBIC_HERMITE(selector)(controlpoints)`
+Transfinite mapping function of cubic Hermite curve.
+
+#### I/O
+
+> #### in
+> `Function` `selector`: domain coordinate selector function.
+>
+> > #### in
+> > `Array` `v`: point of the `domain`.
+> >
+> > #### out
+> > `Number`: the selected coordinate.
+>
+> #### out
+> `Function`: an anonymous function.
+>
+> > #### in
+> > `Array` `controlpoints`: an array of points and curve mapping functions describing curve control points.
+> >
+> > #### out
+> > `Function`: an anonymous mapping function.
+
+#### Example
+
+> ```js
+> var domain = INTERVALS(1)(20);
+> var controlpoints = [[1,0],[1,1],[ -1, 1],[ 1,0]];
+> var curveMapping = CUBIC_HERMITE(S0)(controlpoints);
+> var curve = MAP(curveMapping)(domain);
+> DRAW(curve);
+> ```
+
+> ```js
+> var domain = PROD1x1([INTERVALS(1)(14),INTERVALS(1)(14)]);
+> var c1 = CUBIC_HERMITE(S0)([[1,0,0],[0,1,0],[0,3,0],[-3,0,0]]);
+> var c2 = CUBIC_HERMITE(S0)([[0.5,0,0],[0,0.5,0],[0,1,0],[-1,0,0]]);
+> var sur3 = CUBIC_HERMITE(S1)([c1,c2,[1,1,1],[-1,-1,-1]]);
+> var out = MAP(sur3)(domain);
+> DRAW(out);
+>```
+
+- - -
