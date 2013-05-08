@@ -122,3 +122,32 @@ Transfinite mapping function of cubic Hermite curve.
 >```
 
 - - -
+
+### `CUBIC_UBSPLINE(domain)`
+Tranfinite cubic uniform B-splines curve generator function on `domain`.
+
+#### I/O
+
+> #### in
+> `plasm.Model` `domain`: domain of the generator function.
+>
+> #### out
+> `Function`: an anonymous function.
+>
+> > #### in
+> > `Array` `controlpoints`: an array of points and curve mapping functions describing curve control points.
+> >
+> > #### out
+> > `plasm.Model`: a spline segment.
+
+#### Example
+
+> ```js
+> var domain = INTERVALS(1)(20);
+> var controlpoints = [[-3,6],[-4,2],[-3,-1],[-1,1],[1.5,1.5],[3,4],[5,5],[7,2],[6,-2],[2,-3]];
+> var splineCubic = SPLINE(CUBIC_UBSPLINE(domain))(controlpoints);
+> DRAW(splineCubic);
+>```
+
+- - - 
+
