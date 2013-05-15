@@ -107,3 +107,31 @@ DRAW(model);
 
 - - - 
 
+### `CYLINDRICAL_SURFACE(profile)(vector)`
+
+Create a specific ruled surface where  
+`vector` is the direction of the lines  
+`profile` is the non-complanar section curve  
+that can be a known profile function (e.g. `BEZIER`, ...)
+
+#### I/O
+
+> **&rArr;** `Function` `profile`: mapping `Function` of the profile curve.
+>
+> **&lArr;** `Function`: an anonymous function.
+>
+> > **&rArr;** `Array` `vector`: an array of vector costant components.
+> >
+> > **&lArr;** `Function`: mapping of the profile of the cylindrical surface.
+
+
+#### Example
+
+```js
+var domain = PROD1x1([INTERVALS(1)(20),INTERVALS(1)(6)]);
+var ncpVector = [0,0,1];
+var funProfile = BEZIER(S0)([[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0]]);
+var out = MAP(CYLINDRICAL_SURFACE(funProfile)(ncpVector))(domain);
+DRAW(out);
+```
+
