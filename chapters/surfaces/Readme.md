@@ -171,30 +171,34 @@ Create a surface S mapping as profile product between two plane curves A and B (
 
 #### I/O
 
-> #### in
-> `Array` `profiles`: mapping `Function` of the two plane curves profile to product.
+> **&rArr;** `Array` `profiles`: mapping `Function` of the two plane curves profile to product.
 >
-> #### out
-> `Function`: mapping of the profile product surface
->
+> **&lArr;** `Function`: mapping of the profile product surface
 
 #### Example
 
-> ```js
-> var dom1D = INTERVALS(1)(32);
-> var Su0 = BEZIER(S0)([[0,0,0],[2,0,0],[0,0,4],[1,0,5]]);
-> var curve0 = MAP(Su0)(dom1D);
-> DRAW(COLOR([0,0,1])(curve0));
->
-> var Su1 = BEZIER(S1)([[0,0,0],[3,-0.5,0],[3,3.5,0],[0,3,0]]);
-> var Su1Draw = BEZIER(S0)([[0,0,0],[3,-0.5,0],[3,3.5,0],[0,3,0]]);
-> var curve1 = MAP(Su1Draw)(dom1D);
-> DRAW(COLOR([1,0,1])(curve1));
->
-> var dom2D = PROD1x1([INTERVALS(1)(16),INTERVALS(1)(16)]); // DOMAIN([[0,1],[0,1]])([20,20]);
-> var out = MAP(PROFILEPROD_SURFACE([Su0,Su1]))(dom2D);
-> DRAW(out);
-> ```
+```js
+var domain_1 = INTERVALS(1)(32);
+var domain_2 = PROD1x1([INTERVALS(1)(16),INTERVALS(1)(16)]); // DOMAIN([[0,1],[0,1]])([20,20]);
+
+var controls_a = [[0,0,0],[2,0,0],[0,0,4],[1,0,5]];
+var mapping_a = BEZIER(S0)(controls_a);
+var curve_a = MAP(mapping_a)(domain1);
+DRAW(COLOR([1,0,1])(curve0));
+
+var controls_b = [[0,0,0],[3,-0.5,0],[3,3.5,0],[0,3,0]];
+var mapping_b = BEZIER(S1)(controls_b);
+var curve_b = MAP(mapping_b)(domain_1);
+DRAW(COLOR([1,1,0])(curve_b));
+
+var mapping_b0 = BEZIER(S0)(controls_b);
+var curve_b0 = MAP(mapping_b0)(domain_1);
+DRAW(COLOR([1,1,0])(curve_b));
+
+var mapping_c = PROFILEPROD_SURFACE([mapping_a,mapping_b]);
+var surface = MAP(mapping_c)(domain_2);
+DRAW(surface);
+```
 
 - - -
 
