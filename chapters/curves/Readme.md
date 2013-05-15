@@ -43,31 +43,6 @@ var surface = MAP(BEZIER(S1)([c0,c1,c2,c3]))(domain);
 DRAW(surface);
 ```
 
-- - -
-
-### `CUBIC_CARDINAL(domain)`
-
-Tranfinite Cubic cardinal splines curve generator function on `domain`.
-
-#### I/O
-
-> **&rArr;** `plasm.Model` `domain`: domain of the generator function.
->
-> **&lArr;** `Function`: an anonymous function.
->
-> > **&rArr;** `Array` `controlpoints`: an array of points and curve mapping functions describing curve control points.
-> >
-> > **&lArr;** `plasm.Model`: a spline segment.
-
-#### Example
-
-```js
-var domain = INTERVALS(1)(20);
-var controls = [[-3,6],[-4,2],[-3,-1],[-1,1],[1.5,1.5],[3,4],[5,5],[7,2],[6,-2],[2,-3]];
-var spline = SPLINE(CUBIC_CARDINAL(domain))(controlpoints);
-DRAW(spline);
-```
-
 - - - 
 
 ### `CUBIC_HERMITE(selector)(controlpoints)`
@@ -105,31 +80,6 @@ var c2 = CUBIC_HERMITE(S0)([[0.5,0,0],[0,0.5,0],[0,1,0],[-1,0,0]]);
 var mapping = CUBIC_HERMITE(S1)([c1,c2,[1,1,1],[-1,-1,-1]]);
 var surface = MAP(sur3)(domain);
 DRAW(surface);
-```
-
-- - -
-
-### `CUBIC_UBSPLINE(domain)`
-
-Tranfinite cubic uniform B-splines curve generator function on `domain`.
-
-#### I/O
-
-> **&rArr;** `plasm.Model` `domain`: domain of the generator function.
->
-> **&lArr;** `Function`: an anonymous function.
->
-> > **&rArr;** `Array` `controlpoints`: an array of points and curve mapping functions describing curve control points.
-> >
-> > **&lArr;** `plasm.Model`: a spline segment.
-
-#### Example
-
-```js
-var domain = INTERVALS(1)(20);
-var controls = [[-3,6],[-4,2],[-3,-1],[-1,1],[1.5,1.5],[3,4],[5,5],[7,2],[6,-2],[2,-3]];
-var spline = SPLINE(CUBIC_UBSPLINE(domain))(controlpoints);
-DRAW(spline);
 ```
 
 - - - 
@@ -265,3 +215,54 @@ var points = SIMPLICIAL_COMPLEX(controlpoints)([[0],[1],[2],[3],[4],[5],[6],[7],
 var out = STRUCT([splineCardinal,splineCubic,points]);
 DRAW(out);
 ```
+
+- - -
+
+### `CUBIC_CARDINAL(domain)`
+
+Tranfinite Cubic cardinal splines curve generator function on `domain`.
+
+#### I/O
+
+> **&rArr;** `plasm.Model` `domain`: domain of the generator function.
+>
+> **&lArr;** `Function`: an anonymous function.
+>
+> > **&rArr;** `Array` `controlpoints`: an array of points and curve mapping functions describing curve control points.
+> >
+> > **&lArr;** `plasm.Model`: a spline segment.
+
+#### Example
+
+```js
+var domain = INTERVALS(1)(20);
+var controls = [[-3,6],[-4,2],[-3,-1],[-1,1],[1.5,1.5],[3,4],[5,5],[7,2],[6,-2],[2,-3]];
+var spline = SPLINE(CUBIC_CARDINAL(domain))(controlpoints);
+DRAW(spline);
+```
+
+- - -
+
+### `CUBIC_UBSPLINE(domain)`
+
+Tranfinite cubic uniform B-splines curve generator function on `domain`.
+
+#### I/O
+
+> **&rArr;** `plasm.Model` `domain`: domain of the generator function.
+>
+> **&lArr;** `Function`: an anonymous function.
+>
+> > **&rArr;** `Array` `controlpoints`: an array of points and curve mapping functions describing curve control points.
+> >
+> > **&lArr;** `plasm.Model`: a spline segment.
+
+#### Example
+
+```js
+var domain = INTERVALS(1)(20);
+var controls = [[-3,6],[-4,2],[-3,-1],[-1,1],[1.5,1.5],[3,4],[5,5],[7,2],[6,-2],[2,-3]];
+var spline = SPLINE(CUBIC_UBSPLINE(domain))(controlpoints);
+DRAW(spline);
+```
+
