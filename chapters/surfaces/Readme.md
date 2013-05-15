@@ -135,3 +135,30 @@ var out = MAP(CYLINDRICAL_SURFACE(funProfile)(ncpVector))(domain);
 DRAW(out);
 ```
 
+- - -
+
+### `CONICAL_SURFACE(apex)(profile)`
+
+Create a conical surface between a vertex (`apex`) and a `profile` curve.  
+The curve can be a known profile function, like `BEZIER`, or a custom one.
+
+#### I/O
+
+> **&rArr;** `Array` `apex`: the cone's vertex (an array of coordinates).
+>
+> **&lArr;** `Function`: an anonymous function.
+>
+> > **&rArr;** `Function` `profile`: mapping `Function` of the profile curve.
+> >
+> > **&lArr;** `Function`: mapping of the profile of the conical surface.
+
+
+#### Example
+
+```js
+var domain = PROD1x1([INTERVALS(1)(20),INTERVALS(1)(6)]);
+var apex = [0,0,1];
+var funProfile = BEZIER(S0)([[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0]]);
+var out = MAP(CONICAL_SURFACE(apex)(funProfile))(domain);
+DRAW(out);
+```
